@@ -1,0 +1,58 @@
+* {
+  text-decoration: none;
+}
+
+$red: #FF4500;
+$blue: #191970;
+$black : #000;
+$white : #fff;
+$light-white: #aaa;
+$light-bg: #111;
+
+@mixin grid($val) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
+}
+
+.modal {
+  width: 300px;
+
+  .modal-content {
+    
+    width: 300px;
+
+    .btn-close:hover {
+      background-color: $red;
+      transition: all 0.4s linear;
+    }
+
+    .list-group-item {
+      transition: all 0.4s linear;
+    }
+
+    .list-group-item a {
+      color: black;
+      font-size: 17px
+    }
+
+    
+
+    .list-group-item:hover {
+      background-color: $light-white;
+    }
+
+    .btn:hover {
+      background-color: $red;
+    }
+  }
+}
+
+.modal_edit {
+  padding: 0
+}
+
+.modal_edit ul li {
+  transition: all 0.4s linear;
+  cursor: pointer
+}
